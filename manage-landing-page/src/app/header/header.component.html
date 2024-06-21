@@ -1,1 +1,33 @@
-<p>header works!</p>
+<header class="relative z-50 flex justify-between items-center gap-10 px-6 py-11">
+
+  <figure>
+    <img src="../../assets/images/logo.svg" alt="logo from manage">
+  </figure>
+
+  <nav id="primary-nav" class="hidden">
+    <ul>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#community">Community</a></li>
+    </ul>
+  </nav>
+
+  <button id="toggle-nav" #btnToggleMobileNav (click)="toggleMobileNav()">
+
+  </button>
+
+</header>
+
+<nav id="mobile-nav" class="" #mobileNav>
+  <ul>
+    <li (click)="closeMobileNav()"><a href="#pricing">Pricing</a></li>
+    <li (click)="closeMobileNav()"><a href="#product">Product</a></li>
+    <li (click)="closeMobileNav()"><a href="#about-us">About Us</a></li>
+    <li (click)="closeMobileNav()"><a href="#careers">Careers</a></li>
+    <li (click)="closeMobileNav()"><a href="#community">Community</a></li>
+  </ul>
+</nav>
+
+<div class="navBg" (click)="closeMobileNav()"></div>

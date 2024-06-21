@@ -450,6 +450,34 @@ video {
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
+  overflow-x: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(36 45 82 / var(--tw-text-opacity));
+}
+
+h1{
+  text-wrap: balance;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+h2{
+  text-wrap: balance;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.62px;
+}
+
+section{
+  position: relative;
+  z-index: 30;
 }
 
 *, ::before, ::after{
@@ -558,4 +586,324 @@ body {
   --tw-contain-layout:  ;
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
+}
+
+.hero-description{
+  margin-top: 9px;
+  margin-bottom: 29px;
+  text-wrap: balance;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 28px;
+  --tw-text-opacity: 1;
+  color: rgb(29 30 37 / var(--tw-text-opacity));
+}
+
+.description{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  font-size: 14px;
+  line-height: 28px;
+  --tw-text-opacity: 1;
+  color: rgb(29 30 37 / var(--tw-text-opacity));
+}
+
+.button{
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 96 60 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  &.shadow {
+    box-shadow: 0px 15px 15px -10px #ff9f8e;
+  }
+}
+
+#toggle-nav {
+  width: 25px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./assets/images/icon-hamburger.svg');
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  &.open {
+    background-image: url('./assets/images/icon-close.svg');
+  }
+}
+
+#mobile-nav{
+  pointer-events: none;
+  position: fixed;
+  left: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  --tw-translate-y: -20px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  &.open{
+    pointer-events: auto;
+  }
+  &.open{
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  &.open{
+    opacity: 1;
+  }
+  &.open {
+    & + .navBg{
+      pointer-events: auto;
+    }
+    & + .navBg{
+      opacity: 1;
+    }
+  }
+  ul{
+    display: flex;
+  }
+  ul{
+    flex-direction: column;
+  }
+  ul{
+    align-items: center;
+  }
+  ul{
+    justify-content: center;
+  }
+  ul{
+    gap: 1.5rem;
+  }
+}
+
+.navBg {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+  pointer-events: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 40;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.differences{
+  display: grid;
+  gap: 47px;
+  padding-left: 1.5rem;
+}
+
+.diference {
+  .header{
+    margin-bottom: 0.5rem;
+  }
+  .header{
+    display: flex;
+  }
+  .header{
+    align-items: center;
+  }
+  .header{
+    justify-content: flex-start;
+  }
+  .header{
+    gap: 15px;
+  }
+  .header{
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+  .header{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 240 236 / var(--tw-bg-opacity));
+  }
+  .header{
+    font-size: 16px;
+  }
+  .header{
+    font-weight: 700;
+  }
+  .header{
+    letter-spacing: -0.29px;
+  }
+  .header {
+    p:nth-child(1){
+      border-radius: 9999px;
+    }
+    p:nth-child(1){
+      --tw-bg-opacity: 1;
+      background-color: rgb(243 96 60 / var(--tw-bg-opacity));
+    }
+    p:nth-child(1){
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    p:nth-child(1){
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    p:nth-child(1){
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+  }
+}
+
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.bottom-\[-100px\]{
+  bottom: -100px;
+}
+
+.left-20{
+  left: 5rem;
+}
+
+.right-\[-215px\]{
+  right: -215px;
+}
+
+.top-\[-50px\]{
+  top: -50px;
+}
+
+.z-0{
+  z-index: 0;
+}
+
+.z-30{
+  z-index: 30;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-\[62px\]{
+  margin-top: 62px;
+  margin-bottom: 62px;
+}
+
+.mt-\[13px\]{
+  margin-top: 13px;
+}
+
+.mt-\[93px\]{
+  margin-top: 93px;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.hidden{
+  display: none;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-10{
+  gap: 2.5rem;
+}
+
+.gap-\[19px\]{
+  gap: 19px;
+}
+
+.gap-\[54px\]{
+  gap: 54px;
+}
+
+.p-0{
+  padding: 0px;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-11{
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
+}
+
+.text-start{
+  text-align: start;
+}
+
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
