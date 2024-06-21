@@ -17,6 +17,9 @@
   h2 {
     @apply text-[30px] font-extrabold text-center leading-[45px] tracking-[-0.62px] text-balance;
   }
+  h3 {
+    @apply text-[16px] font-bold text-center tracking-[-0.29px];
+  }
   section {
     @apply relative z-30;
   }
@@ -94,5 +97,14 @@
       }
     }
   }
-
+  .testimonial {
+    @apply p-[21px] relative mx-6;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      top: 20%;
+      @apply bg-[#fafafa] z-0;
+    }
+  }
 }

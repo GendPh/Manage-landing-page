@@ -475,6 +475,13 @@ h2{
   letter-spacing: -0.62px;
 }
 
+h3{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.29px;
+}
+
 section{
   position: relative;
   z-index: 30;
@@ -782,6 +789,26 @@ section{
   }
 }
 
+.testimonial{
+  position: relative;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 21px;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 20%;
+  }
+  &::before{
+    z-index: 0;
+  }
+  &::before{
+    --tw-bg-opacity: 1;
+    background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+  }
+}
+
 .pointer-events-none{
   pointer-events: none;
 }
@@ -814,6 +841,10 @@ section{
   z-index: 0;
 }
 
+.z-10{
+  z-index: 10;
+}
+
 .z-30{
   z-index: 30;
 }
@@ -832,8 +863,16 @@ section{
   margin-bottom: 62px;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .mt-\[13px\]{
   margin-top: 13px;
+}
+
+.mt-\[19px\]{
+  margin-top: 19px;
 }
 
 .mt-\[93px\]{
@@ -850,6 +889,18 @@ section{
 
 .hidden{
   display: none;
+}
+
+.aspect-square{
+  aspect-ratio: 1 / 1;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.w-\[72px\]{
+  width: 72px;
 }
 
 .w-full{

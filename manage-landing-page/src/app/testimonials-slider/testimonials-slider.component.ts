@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import Splide from '@splidejs/splide';
+import { TestimonialComponent } from '../testimonial/testimonial.component';
 
 @Component({
   selector: 'app-testimonials-slider',
   standalone: true,
-  imports: [],
+  imports: [TestimonialComponent],
   templateUrl: './testimonials-slider.component.html',
-  styles: ``
+  styles: []
 })
-export class TestimonialsSliderComponent {
+export class TestimonialsSliderComponent implements AfterViewInit {
 
+  constructor() {
+
+  }
+
+  ngAfterViewInit(): void {
+    new Splide('.splide', {
+      type: 'loop',
+      arrows: false,
+      perPage: 1,
+    }).mount();
+  }
 }
