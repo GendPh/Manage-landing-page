@@ -19,6 +19,7 @@ export class TestimonialsSliderComponent implements AfterViewInit {
     new Splide('.splide', {
       type: 'loop',
       arrows: false,
+      focus: 'center',
       perPage: 1,
     }).mount();
   }

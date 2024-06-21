@@ -1,28 +1,28 @@
 <app-header />
 
-<!-- <img class="top-[-50px] left-20 z-0 absolute pointer-events-none" src="../assets/images/bg-tablet-pattern.svg"
-  alt="a background image a circular"> -->
+<img class="top-[-50px] md:top-[-300px] right-[-80px] md:right-[-350px] md:scale-75 z-0 absolute pointer-events-none"
+  src="../assets/images/bg-tablet-pattern.svg" alt="a background image a circular">
 
-<main class="relative z-30 pb-20">
-  <!--   <section class="gap-[19px] grid px-6">
-    <figure>
+<main class="relative z-30">
+  <section class="gap-[19px] grid md:grid-cols-2 mx-auto px-6 max-w-[1110px]">
+    <figure class="md:col-start-2 md:row-start-1">
       <img src="../assets/images/illustration-intro.svg" alt="img" class="w-full">
     </figure>
 
-    <article class="relative z-30">
-      <h1>Bring everyone together to build better products.</h1>
+    <article class="relative z-30 md:flex md:flex-col md:items-center">
+      <h1 class="">Bring everyone together to build better products.</h1>
 
       <p class="hero-description">Manage makes it simple for software teams to plan day-to-day tasks while keeping the
         larger team goals in view.</p>
 
-      <a class="shadow mx-auto button" href="#">Get Started</a>
+      <a class="shadow mx-auto md:ml-0 button" href="#">Get Started</a>
     </article>
 
-    <img class="right-[-215px] bottom-[-100px] z-0 absolute pointer-events-none"
-      src="../assets/images/bg-tablet-pattern.svg" alt="a background image a circular">
+    <!-- <img class="right-[-215px] bottom-[-100px] z-0 absolute pointer-events-none"
+      src="../assets/images/bg-tablet-pattern.svg" alt="a background image a circular"> -->
   </section>
 
-  <section class="gap-[54px] grid mt-[93px]">
+  <section class="gap-[54px] grid md:grid-cols-2 mx-auto mt-[93px] max-w-[1110px]">
     <article class="px-6">
       <h2>What’s different about Manage?</h2>
 
@@ -40,12 +40,26 @@
       <app-difference Index="03" Title="Everything you need in one place"
         Description="Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution." />
     </article>
-  </section> -->
-
-  <section >
-    <h2 class="my-[62px]">What they’ve said</h2>
-
-    <app-testimonials-slider />
   </section>
 
+  <section>
+    <h2 class="my-[62px] md:mt-[100px] md:text-center">What they’ve said</h2>
+
+    <app-testimonials-slider />
+
+    <button class="block shadow mx-auto my-[57px] button">Get Started</button>
+  </section>
+
+  <section class="relative bg-accent overflow-hidden">
+    <img class="right-[67%] z-0 absolute opacity-10 pointer-events-none" src="../assets/images/bg-tablet-pattern.svg"
+      alt="a background image a circular">
+    <article
+      class="flex md:flex-row flex-col justify-around items-center gap-24 mx-auto px-8 py-[92px] md:py-[50px] max-w-[1110px] text-white">
+
+      <p class="h1">Simplify how your team works today.</p>
+      <button class="mt-[29px] md:w-[250px] button secondary">Get Started</button>
+    </article>
+  </section>
 </main>
+
+<app-footer />
