@@ -1012,6 +1012,24 @@ svg{
   }
 }
 
+input{
+  --tw-text-opacity: 1;
+  color: rgb(36 45 82 / var(--tw-text-opacity));
+  &.fail{
+    --tw-text-opacity: 1;
+    color: rgb(243 96 60 / var(--tw-text-opacity));
+  }
+  &.fail{
+    outline-style: solid;
+  }
+  &.fail{
+    outline-offset: 0px;
+  }
+  &.fail{
+    outline-color: #F3603C;
+  }
+}
+
 .pointer-events-none{
   pointer-events: none;
 }
@@ -1262,12 +1280,12 @@ svg{
   text-align: center;
 }
 
-.text-\[13px\]{
-  font-size: 13px;
-}
-
 .text-\[10px\]{
   font-size: 10px;
+}
+
+.text-\[13px\]{
+  font-size: 13px;
 }
 
 .font-normal{
@@ -1278,12 +1296,17 @@ svg{
   font-style: italic;
 }
 
+.tracking-\[-0\.08px\]{
+  letter-spacing: -0.08px;
+}
+
 .tracking-\[-0\.2px\]{
   letter-spacing: -0.2px;
 }
 
-.tracking-\[-0\.08px\]{
-  letter-spacing: -0.08px;
+.text-accent{
+  --tw-text-opacity: 1;
+  color: rgb(243 96 60 / var(--tw-text-opacity));
 }
 
 .text-gray-600{
@@ -1296,11 +1319,6 @@ svg{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-accent{
-  --tw-text-opacity: 1;
-  color: rgb(243 96 60 / var(--tw-text-opacity));
-}
-
 .opacity-10{
   opacity: 0.1;
 }
@@ -1309,6 +1327,11 @@ svg{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .hover\:text-text\/50:hover{

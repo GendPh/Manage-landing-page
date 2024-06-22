@@ -1,14 +1,19 @@
 <footer class="bg-background-secondary">
   <div class="gap-[54px] grid md:grid-cols-3 mx-auto px-6 py-12 max-w-[1110px] text-white">
 
-    <form class="flex flex-col justify-between md:col-start-3 row-start-1">
+    <form class="flex flex-col justify-between md:col-start-3 row-start-1" #footerForm="ngForm">
 
       <div>
         <div class="flex items-center md:items-start gap-2">
-          <input type="text" class="flex-grow px-6 py-3 rounded-full" placeholder="Updates in your inbox...">
+          <input type="email" id="email" name="email" class="flex-grow px-6 py-3 rounded-full outline-none"
+            [ngClass]="{'fail': emailModel.touched && emailModel.invalid}" placeholder="Updates in your inbox..."
+            required #emailModel="ngModel" [pattern]="emailPattern" [(ngModel)]="email">
           <button class="button">Go</button>
         </div>
-        <p class="pt-2 pl-6 text-[10px] text-accent italic tracking-[-0.08px]">Please insert a valid email</p>
+
+        <p *ngIf="emailModel.touched && emailModel.invalid"
+          class="pt-2 pl-6 text-[10px] text-accent italic tracking-[-0.08px]">Please insert
+          a valid email</p>
       </div>
 
       <p class="md:block hidden mb-2 font-normal text-[13px] text-center text-gray-600 tracking-[-0.2px]">Copyright

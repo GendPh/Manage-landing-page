@@ -143,4 +143,11 @@
       @apply bg-[#fafafa] z-0;
     }
   }
+
+  input {
+    @apply text-text;
+    &.fail {
+      @apply outline-accent outline-offset-0 text-accent outline;
+    }
+  }
 }
