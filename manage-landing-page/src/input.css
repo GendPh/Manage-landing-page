@@ -27,7 +27,13 @@
     @apply relative z-30;
   }
   ul li {
-    @apply text-[15px] tracking-[-0.23px] transition-colors duration-300 hover:text-accent;
+    @apply text-[15px] tracking-[-0.23px] transition-colors duration-300 hover:text-accent cursor-pointer;
+  }
+  svg {
+    @apply cursor-pointer;
+    &:hover path {
+      @apply fill-accent transition-all duration-300;
+    }
   }
 }
 
@@ -39,12 +45,12 @@
     @apply text-[14px] leading-[28px] px-4 text-accent-secondary text-center md:text-start md:px-0 md:pr-4;
   }
   .button {
-    @apply bg-accent text-background text-[13px] font-bold text-center py-3 px-6 rounded-full block w-fit md:px-6;
+    @apply bg-accent text-background text-[13px] font-bold text-center py-3 px-6 rounded-full block w-fit md:px-6 transition-colors duration-300 hover:bg-[#F98F75];
     &.shadow {
       box-shadow: 0px 15px 15px -10px #ff9f8e;
     }
     &.secondary {
-      @apply bg-background text-accent;
+      @apply bg-background text-accent hover:text-[#F98F75];
     }
   }
 
@@ -54,7 +60,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('./assets/images/icon-hamburger.svg');
-    @apply transition-all duration-300;
+    @apply transition-all duration-300 md:hidden;
     &.open {
       background-image: url('./assets/images/icon-close.svg');
     }
@@ -74,6 +80,7 @@
       }
     }
   }
+
   .navBg {
     background: rgb(0, 0, 0);
     background: -moz-linear-gradient(
@@ -102,11 +109,23 @@
     @apply pl-6 md:pr-6 grid gap-[47px];
   }
   .diference {
+    display: grid;
+    grid-template-columns: 67px 1fr;
+    gap: 18px;
+
     .header {
-      @apply flex gap-[15px] justify-start items-center bg-[#FFF0EC] md:bg-transparent text-[16px] font-bold tracking-[-0.29px] rounded-l-full mb-2;
-      p:nth-child(1) {
-        @apply bg-accent text-background rounded-full px-6 py-2;
+      display: grid;
+      grid-template-columns: 67px 1fr;
+      @apply col-span-2 bg-[#fff0ec] font-bold text-text rounded-l-full md:bg-transparent;
+      .index {
+        @apply bg-accent text-center rounded-full py-2 text-white;
       }
+      .title {
+        @apply py-2 pl-3 text-[16px] tracking-[-0.29px];
+      }
+    }
+    .content {
+      @apply p-0 pr-6 description text-start col-span-2 md:col-span-1 md:col-start-2 text-text/70;
     }
   }
 

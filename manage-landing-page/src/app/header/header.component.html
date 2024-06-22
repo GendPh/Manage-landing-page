@@ -4,19 +4,19 @@
     <img src="../../assets/images/logo.svg" alt="logo from manage">
   </figure>
 
-  <nav id="primary-nav" class="hidden">
-    <ul>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#product">Product</a></li>
-      <li><a href="#about-us">About Us</a></li>
-      <li><a href="#careers">Careers</a></li>
-      <li><a href="#community">Community</a></li>
+  <nav id="primary-nav" class="md:block hidden">
+    <ul class="flex items-center gap-8">
+      <li class="hover:text-text/50"><a href="#pricing">Pricing</a></li>
+      <li class="hover:text-text/50"><a href="#product">Product</a></li>
+      <li class="hover:text-text/50"><a href="#about-us">About Us</a></li>
+      <li class="hover:text-text/50"><a href="#careers">Careers</a></li>
+      <li class="hover:text-text/50"><a href="#community">Community</a></li>
     </ul>
   </nav>
 
-  <button id="toggle-nav" #btnToggleMobileNav (click)="toggleMobileNav()">
+  <button id="toggle-nav" #btnToggleMobileNav (click)="toggleMobileNav()"></button>
 
-  </button>
+  <button class="lg:block hidden shadow button">Get Started</button>
 
 </header>
 
