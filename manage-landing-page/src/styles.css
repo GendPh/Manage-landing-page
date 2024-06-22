@@ -650,6 +650,40 @@ svg{
   --tw-contain-style:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .hero-description{
   margin-top: 9px;
   margin-bottom: 29px;
@@ -1034,6 +1068,18 @@ input{
   pointer-events: none;
 }
 
+.visible{
+  visibility: visible;
+}
+
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -1125,12 +1171,20 @@ input{
   display: block;
 }
 
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
 }
 
 .grid{
   display: grid;
+}
+
+.contents{
+  display: contents;
 }
 
 .hidden{
@@ -1170,6 +1224,14 @@ input{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize{
+  resize: both;
 }
 
 .flex-col{
@@ -1222,6 +1284,10 @@ input{
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .bg-accent{
@@ -1334,6 +1400,18 @@ input{
   outline-offset: 2px;
 }
 
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .hover\:text-text\/50:hover{
   color: rgb(36 45 82 / 0.5);
 }
@@ -1441,6 +1519,10 @@ input{
     gap: 0px;
   }
 
+  .md\:gap-\[125px\]{
+    gap: 125px;
+  }
+
   .md\:py-\[50px\]{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1470,6 +1552,10 @@ input{
 
   .lg\:block{
     display: block;
+  }
+
+  .lg\:justify-center{
+    justify-content: center;
   }
 
   .lg\:pr-60{
